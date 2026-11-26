@@ -1,0 +1,37 @@
+{
+  "training": {
+    "batch_size": 4,
+    "gradient_accumulation_steps": 4,
+    "effective_batch_size": 16,
+    "seq_length": 512,
+    "truncation": true,
+    "truncation_side": "right",
+    "packing": false,
+    "max_steps": 10
+  },
+  "task_orders": {
+    "order1": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "order2": [
+      3,
+      1,
+      4,
+      2,
+      5
+    ]
+  },
+  "evaluation": {
+    "input_truncation": false,
+    "context_overflow": "error"
+  },
+  "task5": {
+    "probe_frozen_at": 4,
+    "main_model_adapts": true
+  },
+  "scope": "Paper training profile: 4x4 with 512-token right truncation. Evaluation inputs remain untruncated."
+}
